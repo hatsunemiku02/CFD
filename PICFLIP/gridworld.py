@@ -4,7 +4,10 @@ import grid.grid as grid
 #init 4 particles for each grid
 class GridWorld:
     def __init__(gridsize,xcount,ycount,zcount):
-        self.grids = np.array((xcount,ycount,zcount))
+        self.xcount = xcount
+        self.ycount = ycount
+        self.zcount = zcount
+        self.grids = np.array((self.xcount,self.ycount,self.zcount))
         for i in range(xcount):
             for j in range(ycount):
                 for k in range(zcount):
@@ -19,7 +22,11 @@ class GridWorld:
             self.grids[air].type = 2
 
     def GenerateVecDivergenceMat():
-        
+        divergenceNum = np.array(((self.xcount,self.ycount,self.zcount)))
+        for i in range(xcount):
+            for j in range(ycount):
+                for k in range(zcount):
+                    
 
 
     def GenerateLaplaceOpMat():
